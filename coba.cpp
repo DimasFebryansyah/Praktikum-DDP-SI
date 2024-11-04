@@ -52,7 +52,7 @@ struct alamat
 {
     string jalan;
     string kota;
-    int kodePos;
+    int kode_pos;
 };
 
 struct mahasiswa
@@ -105,13 +105,11 @@ int main()
         cout << "Masukkan Jurusan : ";
         cin >> mahasiswa[i].jurusan;
         cout << "Masukkan Jalan : ";
-        cin.ignore();
-        getline(cin, mahasiswa[i].alamat.jalan);
+        cin >> mahasiswa[i].alamat.jalan;
         cout << "Masukkan Kota : ";
-        getline(cin, mahasiswa[i].alamat.kota);
+        cin >> mahasiswa[i].alamat.kota;
         cout << "Masukkan Kode Pos : ";
-        cin << mahasiswa[i].alamat.kodePos;
-
+        cin >> mahasiswa[i].alamat.kode_pos;
         cout << endl;
 
         cout << "Data Mahasiswa : " << endl;
@@ -120,7 +118,7 @@ int main()
             cout << "Nama Mahasiswa : " << mahasiswa[i].nama << endl;
             cout << "NIM Mahasiswa : " << mahasiswa[i].nim << endl;
             cout << "Jurusan Mahasiswa : " << mahasiswa[i].jurusan << endl;
-            cout << "Alamat Mahasiswa : " << mahasiswa[i].alamat.jalan << ", " << mahasiswa[i].alamat.kota << ", " << mahasiswa[i].alamat.kodePos << endl;
+            cout << "Alamat Mahasiswa : " << mahasiswa[i].alamat.jalan << ", " << mahasiswa[i].alamat.kota << ", " << mahasiswa[i].alamat.kode_pos << endl;
             cout << endl;
         }
     }

@@ -21,7 +21,7 @@ void pertambahan()
     cin >> angka2;
     cout << "Hasil Penjumlahan : ";
     hasil = tambah(angka1, angka2);
-    cout << "Hasil Penjumlahan = " << hasil;
+    cout << "Hasil Penjumlahan = 2" << hasil;
 };
 void perkalian()
 {

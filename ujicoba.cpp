@@ -10,6 +10,10 @@ int kali(int a, int b)
 {
     return a * b;
 }
+int bagi(int a, int b)
+{
+    return a / b;
+}
 void pertambahan()
 {
     int angka1, angka2;
@@ -21,7 +25,7 @@ void pertambahan()
     cin >> angka2;
     cout << "Hasil Penjumlahan : ";
     hasil = tambah(angka1, angka2);
-    cout << "Hasil Penjumlahan = 2" << hasil;
+    cout << "" << hasil;
 };
 void perkalian()
 {
@@ -34,7 +38,20 @@ void perkalian()
     cin >> angka2;
     cout << "Hasil Perkalian : ";
     hasil = kali(angka1, angka2);
-    cout << "Hasil Perkalian = " << hasil;
+    cout << "" << hasil;
+};
+void pembagian()
+{
+    int angka1, angka2;
+    int hasil;
+    cout << "Selamat datang di pembagian" << endl;
+    cout << "Masukkan Angka pertama : ";
+    cin >> angka1;
+    cout << "Masukkan Angka kedua : ";
+    cin >> angka2;
+    cout << "Hasil Pembagian : ";
+    hasil = bagi(angka1, angka2);
+    cout << "" << hasil;
 };
 int main()
 {
@@ -54,5 +71,8 @@ int main()
     case 2:
         perkalian();
         break;
+
+    case 3:
+        pembagian();
     }
 }

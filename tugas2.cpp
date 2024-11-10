@@ -8,7 +8,14 @@ struct Barang
     int stok;
     string tanggal;
 };
-
+void clearScreen()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
+}
 int main()
 {
     // Login
@@ -45,6 +52,7 @@ int main()
         cout << "Menu Minimarket" << endl;
         cout << "1. Input Barang dan Stok\n";
         cout << "2. Keluar dan Output\n";
+        cout << "3. Output Barang dan Stok\n";
         cout << "Pilih Menu: ";
         cin >> menu;
         cout << endl;
@@ -103,6 +111,13 @@ int main()
         {
             cout << endl;
             cout << "Anda masih memiliki " << kesempatan << " kesempatan untuk mengakses halaman utama kembali." << endl;
+            cout << "Apakah Anda ingin membersihkan layar? (y/n): ";
+            char bersihkan;
+            cin >> bersihkan;
+            if (bersihkan == 'y' || bersihkan == 'Y')
+            {
+                clearScreen(); // Membersihkan layar jika pengguna memasukkan 'y'
+            } // Menambah jumlah kesempatan
         }
         else
         {
